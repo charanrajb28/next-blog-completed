@@ -20,6 +20,13 @@
   gap: 50px;
 }
 
+.russo-one-regular {
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 .imgContainer {
   flex: 1;
   height: 500px;
