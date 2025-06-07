@@ -8,26 +8,33 @@
   flex: 1;
 }
 
-.title {
-  font-size: 64px;
-  margin-bottom: 50px;
+.container{
+  margin-top: 30px;
+  padding: 50px 0;
 }
 
+/* .title {
+  font-size: 56px;
+  margin-bottom: 50px;
+} */
+
 .user {
+  margin-top: 10px;
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
 .userImageContainer {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   position: relative;
 }
 
 .avatar {
   border-radius: 50%;
   object-fit: cover;
+  height: 80%;
 }
 
 .userTextContainer {
@@ -38,8 +45,12 @@
 }
 
 .username {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
+}
+.date {
+  font-size: 10px;
+  font-weight: 300;
 }
 
 .imageContainer {

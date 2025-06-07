@@ -1,7 +1,7 @@
-.container {
+/* .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100px;
 }
 
@@ -15,9 +15,9 @@
   flex: 1;
   text-align: center;
   font-size: 36px;
-  font-weight: bold;
+  /* font-weight: bold; 
   font-family: "Russo One", sans-serif;
-  font-weight: 400;
+  font-weight: 100;
   font-style: normal;
 }
 
@@ -55,6 +55,67 @@
 }
 @media screen and (max-width: 640px) {
   .links{
+    justify-content: flex-end;
+  }
+  .link {
+    display: none;
+  }
+} */
+
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Changed from space-around to space-between */
+  height: 100px;
+  padding: 0 20px; /* Added some horizontal padding */
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+  /* flex: 1;  Remove flex to prevent uneven spacing */
+}
+
+.logo{
+  font-size: 36px;
+  font-weight: bold; 
+  font-family: "Russo One", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* flex: 1; Remove flex to prevent uneven spacing */
+  font-size: 16px;
+}
+.links1 {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  /* flex: 1; Remove flex to prevent uneven spacing */
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1280px) {
+  .links {
+    font-size: 18px;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .social {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .links {
     justify-content: flex-end;
   }
   .link {
