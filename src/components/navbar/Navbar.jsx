@@ -19,11 +19,11 @@ const Navbar = () => {
       <div className={styles.links}><div className={styles.links}>
         <Link href="/" className={styles.link}>Homepage</Link>
         <Link href="/" className={styles.link}>Contact</Link>
-        <Link href="/" className={styles.link}>About</Link>
+        <Link href="/#Footer" className={styles.link}>About</Link>
       </div>
       <div className={styles.links1}>
         <AuthLinks />
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
       </div></div>
     </div>
   );

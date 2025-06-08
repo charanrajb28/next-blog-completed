@@ -1,4 +1,4 @@
-.container {
+/* .container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,4 +52,267 @@
     font-weight: 400;
     font-size: 14px;
   }
+} */
+
+
+/* .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.wrapper {
+  background-color: var(--softBg);
+  padding: 150px 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  border-radius: 10px;
+}
+
+.socialButton {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialButton:first-child {
+  background-color: #ff5555;
+}
+
+.socialButton:nth-child(2) {
+  background-color: #111;
+}
+
+.socialButton:nth-child(3) {
+  background-color: #087bea;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 50px 100px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .wrapper {
+    padding: 30px;
+  }
+
+  .socialButton{
+    font-weight: 400;
+    font-size: 14px;
+  }
+} */
+
+
+/* Wrapper and Background */
+.authWrapper {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  background: url('/boxes.jpg') no-repeat center center / cover;
+  z-index: 0;
+}
+
+/* Main Auth Container */
+.authContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 80vh;
+  background: url('/overlay.png') no-repeat center center / cover;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* Form Panels */
+.formPanel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: all 0.7s ease-in-out;
+}
+
+.signIn {
+  left: 0;
+}
+
+.signUp {
+  right: 0;
+}
+
+.active {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 10;
+}
+
+.hidden {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 0;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: transform 0.7s ease-in-out;
+  z-index: 5;
+}
+
+.slideRight {
+  transform: translateX(100%);
+}
+
+.slideLeft {
+  transform: translateX(0%);
+}
+
+.overlayContent {
+  text-align: center;
+  max-width: 300px;
+}
+
+.overlayContent h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.overlayContent p {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.toggleBtn {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggleBtn:hover {
+  background: white;
+  color: #020618;
+}
+
+/* Inputs & Form */
+.authForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  gap: 1rem;
+}
+
+.authForm input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btnPrimary {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btnPrimary:hover {
+  background-color: #1d4ed8;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.divider span {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Social Buttons */
+.socialIcons {
+  display: flex;
+  gap: 12px;
+}
+
+.iconBtn {
+  border: 1px solid #ccc;
+  border-radius: 9999px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.iconBtn:hover {
+  background-color: #f1f5f9;
+}
+
+.iconBtn svg {
+  color: #333;
+  font-size: 16px;
+}
+
+/* Loading */
+.loading {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
 }

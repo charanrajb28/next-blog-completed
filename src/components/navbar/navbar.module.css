@@ -64,18 +64,18 @@
 
 
 
-.container {
+/* .container {
   display: flex;
   align-items: center;
   justify-content: space-between; /* Changed from space-around to space-between */
-  height: 100px;
-  padding: 0 20px; /* Added some horizontal padding */
-}
+  /* height: 100px;
+  padding: 0 20px; /* Added some horizontal padding *
+} 
 
 .social {
   display: flex;
   gap: 10px;
-  /* flex: 1;  Remove flex to prevent uneven spacing */
+  /* flex: 1;  Remove flex to prevent uneven spacing *
 }
 
 .logo{
@@ -90,16 +90,98 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  /* flex: 1; Remove flex to prevent uneven spacing */
+  /* flex: 1; Remove flex to prevent uneven spacing *
   font-size: 16px;
 }
 .links1 {
   display: flex;
   align-items: center;
   gap: 50px;
-  /* flex: 1; Remove flex to prevent uneven spacing */
+  /* flex: 1; Remove flex to prevent uneven spacing *
   font-size: 16px;
 }
+
+@media screen and (max-width: 1280px) {
+  .links {
+    font-size: 18px;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .social {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .links {
+    justify-content: flex-end;
+  }
+  .link {
+    display: none;
+  }
+}
+*/
+
+.container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0 60px;
+  box-sizing: border-box;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  /* Full-bleed alignment */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  color: #ffffff;
+}
+
+
+
+.logo {
+  font-size: 36px;
+  font-family: "Russo One", sans-serif;
+  font-weight: 100;
+  color: #fcfcfc;
+}
+
+.links,
+.links1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #ffffff; /* optional slightly brighter gold on hover */
+  text-decoration: underline;
+}
+
+
 
 @media screen and (max-width: 1280px) {
   .links {
