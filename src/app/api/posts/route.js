@@ -51,6 +51,7 @@ export const GET = async (req) => {
 // CREATE A POST
 export const POST = async (req) => {
   const session = await getAuthSession();
+  console.log("session", session);
 
   if (!session) {
     return new NextResponse(
@@ -64,9 +65,12 @@ export const POST = async (req) => {
       data: { ...body, userEmail: session.user.email },
     });
 
+    console.log(post,"this is post in prisma")
+
+
     return new NextResponse(JSON.stringify(post, { status: 200 }));
   } catch (err) {
-    console.log(err);
+    console.log("post error",err);
     return new NextResponse(
       JSON.stringify({ message: "Something went wrong!" }, { status: 500 })
     );

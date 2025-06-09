@@ -39,42 +39,53 @@ export const authOptions = {
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
     }),
-    CredentialsProvider({
-      name: "Email/Password",
-      credentials: {
-        email: { label: "Email", type: "email" },
-        password: { label: "Password", type: "password" },
-      },
-      async authorize(credentials) {
-        try {
-          const res = await fetch(
-            `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.NEXT_PUBLIC_FIREBASE_API_KEY}`,
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                email: credentials.email,
-                password: credentials.password,
-                returnSecureToken: true,
-              }),
-            }
-          );
+    // import prisma from './connect'  // your prisma client singleton file
 
-          const data = await res.json();
-
-          if (!res.ok) throw new Error(data.error.message);
-
-          return {
-            id: data.localId,
-            email: data.email,
-            name: data.displayName || data.email,
-          };
-        } catch (err) {
-          console.error("Firebase Auth Error:", err.message);
-          return null;
+CredentialsProvider({
+  name: "Email/Password",
+  credentials: {
+    email: { label: "Email", type: "email" },
+    password: { label: "Password", type: "password" },
+  },
+  async authorize(credentials) {
+    try {
+      const res = await fetch(
+        `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.NEXT_PUBLIC_FIREBASE_API_KEY}`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email: credentials.email,
+            password: credentials.password,
+            returnSecureToken: true,
+          }),
         }
-      },
-    }),
+      );
+
+      const data = await res.json();
+
+      if (!res.ok) throw new Error(data.error.message);
+
+      // Upsert the user in Prisma DB
+      const user = await prisma.user.upsert({
+        where: { email: data.email },
+        update: {},
+        create: {
+          id: data.localId,      // optional: use Firebase UID or omit to auto-generate
+          email: data.email,
+          name: data.displayName || data.email,
+          // image: data.photoUrl || null,  // if available from Firebase
+        },
+      });
+
+      return user;
+    } catch (err) {
+      console.error("Firebase Auth Error:", err.message);
+      return null;
+    }
+  },
+})
+,
   ],
   session: {
     strategy: "jwt",
