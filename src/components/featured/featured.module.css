@@ -90,7 +90,7 @@
 } */
 
 
-.container {
+/* .container {
   margin-top: 30px;
 }
 
@@ -126,7 +126,7 @@
   width: 100%;
   max-width: 700px;
   height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%; /* 16:9 aspect ratio *
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -199,5 +199,160 @@
   .title {
     font-size: 36px;
   }
+} */
+
+.container {
+  margin-top: 30px;
+  padding: 20px;
 }
 
+.title {
+  font-size: 96px;
+  font-weight: 400;
+  font-family: 'Anton', sans-serif;
+}
+
+.title1 {
+  font-size: 72px;
+  font-weight: 200;
+  font-family: 'Anton', sans-serif;
+  margin-bottom: 40px;
+}
+
+.post {
+  margin-top: 60px;
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.russo-one-regular {
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.videoContainer {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* .videoContainer {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+}
+
+.videoContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+} */
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.textContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 300px;
+}
+
+.postTitle {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.postDesc {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--softTextColor, #ccc);
+  line-height: 1.6;
+}
+
+.button {
+  padding: 16px 20px;
+  border: none;
+  border-radius: 5px;
+  width: max-content;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1280px) {
+  .title {
+    font-size: 72px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 64px;
+  }
+
+  .videoContainer {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .post {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .videoContainer {
+    padding-bottom: 56.25%;
+  }
+
+  .postTitle {
+    font-size: 28px;
+  }
+
+  .postDesc {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .title1 {
+    font-size: 28px;
+  }
+}
