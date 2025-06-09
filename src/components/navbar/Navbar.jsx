@@ -18,7 +18,7 @@ const Navbar = () => {
       <div></div>
       <div className={styles.links}><div className={styles.links}>
         <Link href="/" className={styles.link}>Homepage</Link>
-        <Link href="/" className={styles.link}>Achievers Wall</Link>
+        <Link href="https://edu-magzine-leij.vercel.app/" className={styles.link}>Achievers Wall</Link>
         <Link href="/#Footer" className={styles.link}>About</Link>
       </div>
       <div className={styles.links1}>
