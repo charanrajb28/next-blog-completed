@@ -96,3 +96,4 @@ CredentialsProvider({
 };
 
 export const getAuthSession = () => getServerSession(authOptions);
+export const dynamic = "force-dynamic";
