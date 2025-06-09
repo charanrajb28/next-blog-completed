@@ -81,7 +81,7 @@ const LoginPage = () => {
               onChange={(e) => setForm({ ...form, password: e.target.value })}
               required
             />
-            {error && <p className="text-red-500 text-sm mb-2">{error}</p>}
+            {error && <p className={styles.errorText}>{error}</p>}
             <button type="submit" className={styles.btnPrimary}>
               SIGN IN
             </button>

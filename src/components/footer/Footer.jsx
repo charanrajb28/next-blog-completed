@@ -219,7 +219,7 @@ const Footer = () => {
           <span className={styles.listTitle}>Links</span>
           <Link href="/">Homepage</Link>
           <Link href="/#CardList">Blog</Link>
-          <Link href="/">Achievers Wall</Link>
+          <Link href="https://edu-magzine-leij.vercel.app/">Achievers Wall</Link>
           <Link href="/#Footer">About</Link>
         </div>
         <div className={styles.list}>
