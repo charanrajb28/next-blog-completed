@@ -15,7 +15,7 @@ const MenuPosts = ({ withImage }) => {
         <div className={styles.textContainer}>
           <span className={`${styles.category} ${styles.travel}`}>Travel</span>
           <h3 className={styles.postTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Mufasa: The Lion King Who Taught Us Leadership, Legacy, and Love
           </h3>
           <div className={styles.detail}>
             <span className={styles.username}>John Doe</span>
@@ -34,7 +34,7 @@ const MenuPosts = ({ withImage }) => {
             Culture
           </span>
           <h3 className={styles.postTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Blockchain: The Digital Backbone of Tomorrow
           </h3>
           <div className={styles.detail}>
             <span className={styles.username}>John Doe</span>
@@ -51,7 +51,7 @@ const MenuPosts = ({ withImage }) => {
         <div className={styles.textContainer}>
           <span className={`${styles.category} ${styles.food}`}>Food</span>
           <h3 className={styles.postTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Indian Tech Titans: How Satya Nadella and Sundar Pichai are Shaping the Future of Technology.
           </h3>
           <div className={styles.detail}>
             <span className={styles.username}>John Doe</span>
@@ -70,7 +70,7 @@ const MenuPosts = ({ withImage }) => {
             Fashion
           </span>
           <h3 className={styles.postTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            🔐 Cybersecurity: The Silent Guardian of the Digital Wor
           </h3>
           <div className={styles.detail}>
             <span className={styles.username}>John Doe</span>
